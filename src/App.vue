@@ -1,5 +1,8 @@
 <template>
   <main>
+    <ChildComponent @add="(i) => (count += i)" />
+    <p>Count: {{ count }}</p>
+
     <listItem
       v-for="(item, index) in database"
       :name="item.name"
@@ -13,6 +16,7 @@
 
 <script setup>
 import listItem from "./components/listItem.vue";
+import ChildComponent from "./components/Child.vue";
 import { ref } from "vue";
 
 let database = ref([
@@ -32,6 +36,8 @@ let database = ref([
     salary: 125000,
   },
 ]);
+
+const count = ref(0);
 
 function deleteItem(position) {
   database.value.splice(position, 1);
