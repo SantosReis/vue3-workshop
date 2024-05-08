@@ -1,10 +1,11 @@
 <template>
   <main>
     <listItem
-      :name="database[0].name"
-      :department="database[0].department"
-      :salary="database[0].salary"
-      :position="1"
+      v-for="(item, index) in database"
+      :name="item.name"
+      :department="item.department"
+      :salary="item.salary"
+      :position="index"
     />
   </main>
 </template>
