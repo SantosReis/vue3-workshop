@@ -1,6 +1,11 @@
 <template>
   <main>
-    <listItem name="John" department="IT" salary="99" position="1" />
+    <listItem
+      :name="database[0].name"
+      :department="database[0].department"
+      :salary="database[0].salary"
+      :position="1"
+    />
   </main>
 </template>
 
