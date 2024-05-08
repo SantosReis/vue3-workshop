@@ -4,6 +4,7 @@
     <p>Department: {{ department }}</p>
     <p>Salary: {{ salary }}</p>
     <p>Position: {{ position }}</p>
+    <button @click="$emit('deleteItem', position)">Delete Item</button>
   </div>
 </template>
 

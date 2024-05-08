@@ -6,6 +6,7 @@
       :department="item.department"
       :salary="item.salary"
       :position="index"
+      v-on:deleteItem="deleteItem"
     />
   </main>
 </template>
@@ -31,6 +32,10 @@ let database = ref([
     salary: 125000,
   },
 ]);
+
+function deleteItem(position) {
+  database.value.splice(position, 1);
+}
 </script>
 
 <style scoped>
