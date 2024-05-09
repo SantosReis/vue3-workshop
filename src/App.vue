@@ -1,7 +1,9 @@
 <template>
   <main>
     <Nav />
-    <RouterView />
+    <section class="w-fit mx-auto mt-10 mb-5">
+      <RouterView />
+    </section>
   </main>
 </template>
 
