@@ -1,6 +1,7 @@
 <template>
   <main>
     <ChildComponent @add="(i) => (count += i)" />
+    <p>{{ $route.name }}</p>
     <p>Count: {{ count }}</p>
 
     <listItem
