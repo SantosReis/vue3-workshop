@@ -6,6 +6,7 @@ import Posts from "../views/Posts.vue";
 import PostsDetail from "../views/PostsDetail.vue";
 import Watchers from "../views/Watchers.vue";
 import LifecycleHooks from "../views/LifecycleHooks.vue";
+import DynamicComponent from "../views/DynamicComponent.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -13,6 +14,11 @@ const routes = [
   { path: "/postDetail/:id", name: "PostsDetail", component: PostsDetail },
   { path: "/emitters", name: "Emitters", component: Emitters },
   { path: "/watchers", name: "Watchers", component: Watchers },
+  {
+    path: "/dynamic-component",
+    name: "DynamicComponent",
+    component: DynamicComponent,
+  },
   {
     path: "/lifecycle-hooks",
     name: "LifecycleHooks",
