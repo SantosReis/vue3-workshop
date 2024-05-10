@@ -7,6 +7,7 @@ import PostsDetail from "../views/PostsDetail.vue";
 import Watchers from "../views/Watchers.vue";
 import LifecycleHooks from "../views/LifecycleHooks.vue";
 import DynamicComponent from "../views/DynamicComponent.vue";
+import Teleport from "../views/Teleport.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -14,6 +15,7 @@ const routes = [
   { path: "/postDetail/:id", name: "PostsDetail", component: PostsDetail },
   { path: "/emitters", name: "Emitters", component: Emitters },
   { path: "/watchers", name: "Watchers", component: Watchers },
+  { path: "/teleport", name: "Teleport", component: Teleport },
   {
     path: "/dynamic-component",
     name: "DynamicComponent",
