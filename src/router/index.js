@@ -9,6 +9,7 @@ import LifecycleHooks from "../views/LifecycleHooks.vue";
 import DynamicComponent from "../views/DynamicComponent.vue";
 import Teleport from "../views/Teleport.vue";
 import Slots from "../views/Slots.vue";
+import Computed from "../views/Computed.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -18,6 +19,7 @@ const routes = [
   { path: "/watchers", name: "Watchers", component: Watchers },
   { path: "/teleport", name: "Teleport", component: Teleport },
   { path: "/slots", name: "Slots", component: Slots },
+  { path: "/computed", name: "Computed", component: Computed },
   {
     path: "/dynamic-component",
     name: "DynamicComponent",
