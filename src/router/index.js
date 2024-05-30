@@ -10,6 +10,7 @@ import DynamicComponent from "../views/DynamicComponent.vue";
 import Teleport from "../views/Teleport.vue";
 import Slots from "../views/Slots.vue";
 import Computed from "../views/Computed.vue";
+import ComputedWatch from "../views/ComputedWatch.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -20,6 +21,7 @@ const routes = [
   { path: "/teleport", name: "Teleport", component: Teleport },
   { path: "/slots", name: "Slots", component: Slots },
   { path: "/computed", name: "Computed", component: Computed },
+  { path: "/computed-watch", name: "ComputedWatch", component: ComputedWatch },
   {
     path: "/dynamic-component",
     name: "DynamicComponent",
