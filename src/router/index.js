@@ -8,6 +8,7 @@ import Watchers from "../views/Watchers.vue";
 import LifecycleHooks from "../views/LifecycleHooks.vue";
 import DynamicComponent from "../views/DynamicComponent.vue";
 import Teleport from "../views/Teleport.vue";
+import Slots from "../views/Slots.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -16,6 +17,7 @@ const routes = [
   { path: "/emitters", name: "Emitters", component: Emitters },
   { path: "/watchers", name: "Watchers", component: Watchers },
   { path: "/teleport", name: "Teleport", component: Teleport },
+  { path: "/slots", name: "Slots", component: Slots },
   {
     path: "/dynamic-component",
     name: "DynamicComponent",
