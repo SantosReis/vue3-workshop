@@ -12,6 +12,7 @@ import Slots from "../views/Slots.vue";
 import Computed from "../views/Computed.vue";
 import ComputedWatch from "../views/ComputedWatch.vue";
 import Signals from "../views/Signals.vue";
+import ArrayMethods from "../views/ArrayMethods.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -24,6 +25,7 @@ const routes = [
   { path: "/computed", name: "Computed", component: Computed },
   { path: "/computed-watch", name: "ComputedWatch", component: ComputedWatch },
   { path: "/signals", name: "Signals", component: Signals },
+  { path: "/array-methods", name: "ArrayMethods", component: ArrayMethods },
   {
     path: "/dynamic-component",
     name: "DynamicComponent",
