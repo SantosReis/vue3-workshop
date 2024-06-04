@@ -9,19 +9,22 @@ const users = [
   { name: "Mark", age: 23, friends: ["John", "Peter"] },
 ];
 
-//[].filter()
+//[].filter() instead of if conditionals
 const orderThan20 = users.filter((user) => user.age > 20);
-console.log(orderThan20);
+console.log("filter()", orderThan20);
 
-//[].map()
+//[].map() to rebuild to a new array
 const names = users.map((user) => user.name);
-console.log(names);
+console.log("map()", names);
 
-//[].reduce()
-// const welcomeMessage = users.reduce((messages, user) => {
-//   messages.push(`Welcome ${user.name}`);
-// });
-// console.log(welcomeMessage);
+// [].reduce(); to sum calculations
+const welcomeMessage = users.reduce((messages, user) => {
+  messages.push(`Welcome ${user.name}`);
+  return messages;
+}, []);
+console.log(welcomeMessage);
+
+// [].reduce(); to sum calculations
 const items = [
   { name: "Apple", price: 1 },
   { name: "Orange", price: 2 },
@@ -30,12 +33,15 @@ const items = [
 const totalPrice = items.reduce((accumulator, item) => {
   return (accumulator += item.price);
 }, 0);
+console.log(totalPrice);
 
 //[].find()
 const peter = users.find((user) => user.name === "Peter");
 console.log(peter);
 
-//[].every() and [].some()
+//[].every() and [].some() as has (All vs Any)
+//every will return true if all predicate is true, every() returns on first false. every() is analogue to logical AND
+//some will return true if any predicate is true, some() returns on first true. some() is analogue to logical OR
 const hasFriends = users.every((user) => user.friends.length > 0);
 console.log(hasFriends);
 const hasPeter = users.some((user) => user.name === "Peter2");
@@ -48,7 +54,7 @@ console.log(users);
 //[].forEach()
 users.forEach((user) => console.log(user.name));
 
-//[].includes(), [].indexOf() and [].findIdex()
+//[].includes(), [].indexOf() and [].findIdex() as in_array()
 const numberArray = [1, 2, 3];
 const includes2 = numberArray.includes(2);
 console.log(includes2);
@@ -65,14 +71,28 @@ const flattened = nestedArray.flat();
 console.log(flattened);
 
 //[].flatMap()
-// const friends1 = users.reduce((friends, user) => {
-//   return [...friends, ...user.friends];
-// }, []);
-// console.log(friends1);
+const friends1 = users.reduce((friends, user) => {
+  return [...friends, ...user.friends];
+}, []);
+console.log(friends1);
 
 const friends2 = users.map((user) => user.friends).flat();
 console.log(friends2);
-const friends3 = users.flatMap((user) => user.friends);
 
+const friends3 = users.flatMap((user) => user.friends);
+console.log(friends3);
+
+// Deduplication
 const uniqueChildren = [...new Set(friends3)];
+console.log(uniqueChildren);
+
+//[].splice() to add or remove items
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// At position 2, add "Lemon" and "Kiwi":
+fruits.splice(2, 0, "Lemon", "Kiwi");
+console.log(fruits);
+
+// At position 2, remove 2 items from an certain postion
+fruits.splice(2, 2);
+console.log(fruits);
 </script>
