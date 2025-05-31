@@ -13,6 +13,7 @@ import Computed from "../views/Computed.vue";
 import ComputedWatch from "../views/ComputedWatch.vue";
 import Signals from "../views/Signals.vue";
 import ArrayMethods from "../views/ArrayMethods.vue";
+import AuthModal from "../views/AuthModal.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -26,6 +27,7 @@ const routes = [
   { path: "/computed-watch", name: "ComputedWatch", component: ComputedWatch },
   { path: "/signals", name: "Signals", component: Signals },
   { path: "/array-methods", name: "ArrayMethods", component: ArrayMethods },
+  { path: "/auth-modal", name: "AuthModal", component: AuthModal },
   {
     path: "/dynamic-component",
     name: "DynamicComponent",
